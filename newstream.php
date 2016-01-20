@@ -39,7 +39,7 @@
 	   
 		    // markup for form ?>
 		    <p>
-		        <label for="<?php echo $this->get_field_id( 'iSourceCategory' ); ?>">Assumed PLF</label>
+		        <label for="<?php echo $this->get_field_id( 'iSourceCategory' ); ?>">Post Sort Order</label>
 		        <input class="widefat" type="text" id="<?php echo $this->get_field_id( 'iSourceCategory' ); ?>" name="<?php echo $this->get_field_name( 'iSourceCategory' ); ?>" value="<?php echo esc_attr( $iSourceCategory ); ?>">
 		    </p>
 		             
@@ -56,6 +56,23 @@
 	     
 	    function widget( $args, $instance ) {
 
+	    	$args = array( 'posts_per_page' => 5, 'category' => 4 );
+			$myposts = get_posts( $args );
+			
+			//print_r($myposts); exit;
+			$lies = ''; 
+
+			foreach ( $myposts as $post ) {
+
+				//print_r($post);
+
+				$link = the_content();
+
+				$lies .= '<li>';
+				$lies .= '<a target="_blank" href="'.$link.'">'.$post->post_title.'</a>';
+				$lies .= '</li>';
+			}
+				
 	       	include('newstream.ui.inc.php');
 	    }
 	     
