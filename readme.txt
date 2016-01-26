@@ -11,7 +11,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-A Wordpress plugin that displays post titles chronologically, and uses post content as external links.
+A Wordpress plugin that displays post titles chronologically, and uses post content as external links. Create a category, add one or more posts to this category. Post titles will be link text, post content should consist of only URL(s) and will be used at the href, link address in the rendered widget.
+This allows for a news stream widget to be populated, using posts.
 
 == Installation ==
 
@@ -25,7 +26,12 @@ This section describes how to install the plugin and get it working.
 
 = Why another post category plugin? =
 
-Because this one, uses content as link to (an external) resource.
+Because this one, uses content as link to (an external) resource. Easily add a news flash/stream widget, using posts and post content.
+
+= How do i set news update items? =
+
+Create a custom category e.g. News. Add posts to this category.
+Post titles are link text and post content, will consist of only a single URL.
 
 == Screenshots ==
 
@@ -37,6 +43,9 @@ Because this one, uses content as link to (an external) resource.
 = 1.0 =
 * Added barebones, non styled functioning.
 * Added category selector.
+
+= 1.1 =
+* Added multiple instance support.
 
 == Upgrade Notice ==
 
@@ -53,3 +62,7 @@ https://codex.wordpress.org/Widgets_API
 https://developer.wordpress.org/plugins/the-basics/
 
 https://codex.wordpress.org/Writing_a_Plugin
+
+https://wordpress.org/plugins/about/svn/
+
+https://wordpress.org/plugins/newstream/
